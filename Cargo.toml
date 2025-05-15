@@ -8,7 +8,7 @@ repository = "https://github.com/imgui-rs/imgui-rs"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-imgui = { version = "0.12.0", features = ["docking"], git = "https://github.com/imgui-rs/imgui-rs" }
+imgui = { version = "0.12.0", features = ["docking"] }
 
 glow = "0.14"
 glutin = "0.32"
@@ -16,3 +16,6 @@ glutin-winit = "0.5"
 raw-window-handle = "0.6.0"
 winit = "0.30"
 thiserror = "1.0.38"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.58.0", features = ["Win32_Graphics_Dwm"] }
